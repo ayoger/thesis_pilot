@@ -22,7 +22,6 @@ In Fall 2023, the SFSU Boyer lab ran a pilot experiment at the Estuary and Ocean
 
 - **Curated by:** Amy Yoger
 - **Funded by [optional]:** National Science Foundation
-- **Shared by [optional]:** [More Information Needed]
 - **Language(s) (NLP):** English
 - **License:** N/A
 
@@ -31,91 +30,19 @@ In Fall 2023, the SFSU Boyer lab ran a pilot experiment at the Estuary and Ocean
 ### Dataset Fields
 
 section_ID : text; shows the eelgrass section ID number; it can be read as tank#.plant#.segment#
-area_pre	
-area_post	
-area_change	
-scan_page_pre	
-scan_page_post	
-notes_pre	
-notes_post!
+area_pre	: numeric; surface area of eelgrass segment pre - assay
+area_post	: numeric; surface area of eelgrass segment post - assay
+area_change	: numeric; the change in surface area of the eelgrass segment 
+scan_page_pre	: text; the ID of the scan page that the eelgrass was scanned on pre-assay
+scan_page_post : text; the ID of the scan page that the eelgrass was scanned on post-assay
+notes_pre	: text; informative notes on the scanning proccess 
+notes_post: text; informative notes on the scanning proccess 
 [image](https://github.com/ayoger/thesis_pilot/assets/142846984/2fd59246-01f6-4b51-815d-394ff294c00d)
 
+## Dataset Card Authors 
 
-## Dataset Creation
-
-
-#### Data Collection and Processing
-
-<!-- This section describes the data collection and processing process such as data selection criteria, filtering and normalization methods, tools and libraries used, etc. -->
-
-[More Information Needed]
-
-#### Who are the source data producers?
-
-<!-- This section describes the people or systems who originally created the data. It should also include self-reported demographic or identity information for the source data creators if this information is available. -->
-
-[More Information Needed]
-
-### Annotations [optional]
-
-<!-- If the dataset contains annotations which are not part of the initial data collection, use this section to describe them. -->
-
-#### Annotation process
-
-<!-- This section describes the annotation process such as annotation tools used in the process, the amount of data annotated, annotation guidelines provided to the annotators, interannotator statistics, annotation validation, etc. -->
-
-[More Information Needed]
-
-#### Who are the annotators?
-
-<!-- This section describes the people or systems who created the annotations. -->
-
-[More Information Needed]
-
-#### Personal and Sensitive Information
-
-<!-- State whether the dataset contains data that might be considered personal, sensitive, or private (e.g., data that reveals addresses, uniquely identifiable names or aliases, racial or ethnic origins, sexual orientations, religious beliefs, political opinions, financial or health data, etc.). If efforts were made to anonymize the data, describe the anonymization process. -->
-
-[More Information Needed]
-
-## Bias, Risks, and Limitations
-
-<!-- This section is meant to convey both technical and sociotechnical limitations. -->
-
-[More Information Needed]
-
-### Recommendations
-
-<!-- This section is meant to convey recommendations with respect to the bias, risk, and technical limitations. -->
-
-Users should be made aware of the risks, biases and limitations of the dataset. More information needed for further recommendations.
-
-## Citation [optional]
-
-<!-- If there is a paper or blog post introducing the dataset, the APA and Bibtex information for that should go in this section. -->
-
-**BibTeX:**
-
-[More Information Needed]
-
-**APA:**
-
-[More Information Needed]
-
-## Glossary [optional]
-
-<!-- If relevant, include terms and calculations in this section that can help readers understand the dataset or dataset card. -->
-
-[More Information Needed]
-
-## More Information [optional]
-
-[More Information Needed]
-
-## Dataset Card Authors [optional]
-
-[More Information Needed]
+Amy Yoger
 
 ## Dataset Card Contact
 
-[More Information Needed]
+Amy Yoger
