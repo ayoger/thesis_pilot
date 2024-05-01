@@ -18,8 +18,7 @@ This dataset card has been generated using [this raw template](https://github.co
 
 ### Dataset Description
 
-<!-- Provide a longer summary of what this dataset is. -->
-
+In Fall 2023, the SFSU Boyer lab ran a pilot experiment at the Estuary and Ocean Science Center. The research objective was to determine the impacts of increased ocean acidity and nutrients on Ampithoe valida herbivory of eelgrass in San Francisco Bay. Mesocosm tanks were used to expose eelgrass plants to different treatment combinations in increased nutrients and ocean acidity for 30 days. A. valida were also exposed to either ambient bay water or acidified water. Then, eelgrass segments from plants from different treatment combinations were given to A.valida in two feeding assays, choice and no choice, to determine A.valida herbivory under the different treatments. Eelgrass segments were scanned pre and post feeding assays, and uploaded to ImageJ to determine the change is surface area of tissue as a a measure of herbivory. 
 
 - **Curated by:** Amy Yoger
 - **Funded by [optional]:** National Science Foundation
@@ -31,9 +30,16 @@ This dataset card has been generated using [this raw template](https://github.co
 
 ### Dataset Fields
 
-<!-- This section provides a description of the dataset fields, and additional information about the dataset structure such as criteria used to create the splits, relationships between data points, etc. -->
+section_ID : text; shows the eelgrass section ID number; it can be read as tank#.plant#.segment#
+area_pre	
+area_post	
+area_change	
+scan_page_pre	
+scan_page_post	
+notes_pre	
+notes_post!
+[image](https://github.com/ayoger/thesis_pilot/assets/142846984/2fd59246-01f6-4b51-815d-394ff294c00d)
 
-[More Information Needed]
 
 ## Dataset Creation
 
