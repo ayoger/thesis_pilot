@@ -21,38 +21,15 @@ This dataset card aims to be a base template for new datasets. It has been gener
 <!-- Provide a longer summary of what this dataset is. -->
 
 
-
 - **Curated by:** Amy Yoger
 - **Funded by [optional]:** National Science Foundation
 - **Shared by [optional]:** [More Information Needed]
 - **Language(s) (NLP):** English
 - **License:** N/A
 
-### Dataset Sources [optional]
-
-<!-- Provide the basic links for the dataset. -->
-
-- **Repository:** [More Information Needed]
-- **Paper [optional]:** [More Information Needed]
-- **Demo [optional]:** [More Information Needed]
-
-## Uses
-
-<!-- Address questions around how the dataset is intended to be used. -->
-
-### Direct Use
-
-<!-- This section describes suitable use cases for the dataset. -->
-
-[More Information Needed]
-
-### Out-of-Scope Use
-
-<!-- This section addresses misuse, malicious use, and uses that the dataset will not work well for. -->
-
-[More Information Needed]
-
 ## Dataset Structure
+
+### Dataset Fields
 
 <!-- This section provides a description of the dataset fields, and additional information about the dataset structure such as criteria used to create the splits, relationships between data points, etc. -->
 
@@ -60,15 +37,6 @@ This dataset card aims to be a base template for new datasets. It has been gener
 
 ## Dataset Creation
 
-### Curation Rationale
-
-<!-- Motivation for the creation of this dataset. -->
-
-[More Information Needed]
-
-### Source Data
-
-<!-- This section describes the source data (e.g. news text and headlines, social media posts, translated sentences, ...). -->
 
 #### Data Collection and Processing
 
