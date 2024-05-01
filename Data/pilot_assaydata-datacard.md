@@ -8,9 +8,9 @@ tags:
 - San Francisco Bay
 pretty_name: A. Valida Feeding Assay Eelgrass Scans - Pilot
 ---
-# Dataset Card for Dataset Name
+# Dataset Card for pilot_assaydata
 
-<!-- Provide a quick summary of the dataset. -->
+This dataset is from the SFSU Boyer Lab NSF Pilot project in Fall 2023.  
 
 This dataset card aims to be a base template for new datasets. It has been generated using [this raw template](https://github.com/huggingface/huggingface_hub/blob/main/src/huggingface_hub/templates/datasetcard_template.md?plain=1).
 
@@ -22,11 +22,11 @@ This dataset card aims to be a base template for new datasets. It has been gener
 
 
 
-- **Curated by:** [More Information Needed]
-- **Funded by [optional]:** [More Information Needed]
+- **Curated by:** Amy Yoger
+- **Funded by [optional]:** National Science Foundation
 - **Shared by [optional]:** [More Information Needed]
-- **Language(s) (NLP):** [More Information Needed]
-- **License:** [More Information Needed]
+- **Language(s) (NLP):** English
+- **License:** N/A
 
 ### Dataset Sources [optional]
 
