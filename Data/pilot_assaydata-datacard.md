@@ -30,13 +30,21 @@ In Fall 2023, the SFSU Boyer lab ran a pilot experiment at the Estuary and Ocean
 ### Dataset Fields
 
 section_ID : text; shows the eelgrass section ID number; it can be read as tank#.plant#.segment#
+
 area_pre	: numeric; surface area of eelgrass segment pre - assay
+
 area_post	: numeric; surface area of eelgrass segment post - assay
+
 area_change	: numeric; the change in surface area of the eelgrass segment 
+
 scan_page_pre	: text; the ID of the scan page that the eelgrass was scanned on pre-assay
+
 scan_page_post : text; the ID of the scan page that the eelgrass was scanned on post-assay
+
 notes_pre	: text; informative notes on the scanning proccess 
+
 notes_post: text; informative notes on the scanning proccess 
+
 [image](https://github.com/ayoger/thesis_pilot/assets/142846984/2fd59246-01f6-4b51-815d-394ff294c00d)
 
 ## Dataset Card Authors 
