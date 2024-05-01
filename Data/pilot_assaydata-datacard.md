@@ -12,7 +12,7 @@ pretty_name: A. Valida Feeding Assay Eelgrass Scans - Pilot
 
 This dataset is from the SFSU Boyer Lab NSF Pilot project in Fall 2023.  
 
-This dataset card aims to be a base template for new datasets. It has been generated using [this raw template](https://github.com/huggingface/huggingface_hub/blob/main/src/huggingface_hub/templates/datasetcard_template.md?plain=1).
+This dataset card has been generated using [this raw template](https://github.com/huggingface/huggingface_hub/blob/main/src/huggingface_hub/templates/datasetcard_template.md?plain=1).
 
 ## Dataset Details
 
