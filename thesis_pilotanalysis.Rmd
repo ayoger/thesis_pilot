@@ -1,0 +1,167 @@
+---
+title: "The effects of ocean acidification and nutrient additions on invasive amphipod herbivory of Zostera marina (eelgrass) in San Francisco Bay"
+author: "Amy Yoger"
+date: "2024-05-06"
+output: html_document
+---
+
+# Introduction
+write here for your project! 
+
+```{r load-packages, message=FALSE}
+library(tidyverse)
+library(openintro)
+library(nlme)
+library(lme4)
+library(emmeans)
+library(ggpubr)
+library(lmerTest)
+```
+
+# Data Preparation & Plots in R
+
+```{r}
+#set working directory 
+setwd("~/Library/Mobile Documents/com~apple~CloudDocs/SFSU/Thesis/My Thesis/Git-Hub/NSF Pilot Project/thesis_pilot")
+
+#import data
+choicei <- read.csv("~/Library/Mobile Documents/com~apple~CloudDocs/SFSU/Thesis/My Thesis/Git-Hub/NSF Pilot Project/thesis_pilot/Data/2023.10_Feeding Assays_Choice_IDs.csv")
+
+choicedat <- read.csv("~/Library/Mobile Documents/com~apple~CloudDocs/SFSU/Thesis/My Thesis/Git-Hub/NSF Pilot Project/thesis_pilot/Data/2023.10_Choice_EelgrassSegmentMass.csv")
+
+choicedat2 <- read.csv("~/Library/Mobile Documents/com~apple~CloudDocs/SFSU/Thesis/My Thesis/Git-Hub/NSF Pilot Project/thesis_pilot/Data/pilot_assaydata.csv")
+
+choicedat2man <- read.csv("~/Library/Mobile Documents/com~apple~CloudDocs/SFSU/Thesis/My Thesis/Git-Hub/NSF Pilot Project/thesis_pilot/Data/2023.10_AV_Choice_AssaySegmentScanProcessing_manualpost.csv")
+
+avmassdat <- read.csv("~/Library/Mobile Documents/com~apple~CloudDocs/SFSU/Thesis/My Thesis/Git-Hub/NSF Pilot Project/thesis_pilot/Data/2023.10.27_AV_Choice_AVmasspercontainer.csv")
+
+
+#data preparation 
+choiceid <- choicei %>% 
+  pivot_longer(A:D,
+               names_to = "treatment",
+               values_to = "section_ID") %>% 
+  relocate(c(treatment, section_ID), .after = AV_control)
+
+#av mass
+avmassdata <- avmassdat %>% 
+  mutate(av_drymass_g = Boat_AV_dry_mass_g - Boat_mass_g) %>% 
+  dplyr::select(-Boat_AV_dry_mass_g, -Boat_mass_g) %>% 
+  rename(unit_ID = Container_ID)
+
+#dataframes that join the data to IDs
+
+choicedata <- left_join(choiceid, choicedat) %>% 
+  left_join(choicedat2man) %>% 
+  left_join(avmassdata, by = "unit_ID") %>% 
+  mutate(AVeel_treat = paste(tankpH_treat, "_", treatment),
+         pH_treat = ifelse(treatment %in% c("A", "B"), "ambient",
+                           ifelse(treatment %in% c("C", "D"), "reduced", NA)),
+         nut_treat = ifelse(treatment %in% c("A", "C"), "ambient",
+                           ifelse(treatment %in% c("B", "D"), "increased", NA)),
+         plant_ID = str_extract(section_ID, '[0-9]+.[0-9]+'),
+         section_age = str_remove(section_ID, "^([^.]+.){2}"),
+         area_change_adj = area_change/av_drymass_g) %>% 
+  relocate(c(AVeel_treat, pH_treat, nut_treat), .after = treatment) %>% 
+  relocate(c(AV_no, mass_mg, area_change, area_change_adj, plant_ID, section_age), .before = Notes)
+
+```
+
+# Plots
+
+```{r}
+# **Plots for Eelgrass Area**
+
+#bulk area loss for AV *not control, not adjusted*
+boxplota1 <- ggplot(data = choicedata[choicedata$AV_control == "AV",],
+                    aes(x = treatment,
+                        y = area_change,
+                        color = tankpH_treat)) +
+  geom_hline(yintercept = 0, 
+             color = "black",
+             size = 0.8) +
+  geom_boxplot(position = position_dodge(0.8),
+               size = 0.8) +
+  geom_point(position = position_dodge(0.8),
+             size = 2) +
+   geom_text(aes(label = area_change), 
+            position = position_dodge(0.8),
+            vjust = -0.5, 
+            size = 3) + # Adjust position and size of text
+  scale_color_manual(name = expression(paste(italic("A. valida") ~ "pH")),
+                     breaks = c("ambient", "reduced"),
+                     values = c("grey70", "cyan4")) +
+  scale_x_discrete(breaks = c("A", "B", "C", "D"),
+                   labels = c("ambient pH\nambient nut.", "ambient pH\nincreased nut.",
+                              "reduced pH\nambient nut.", "reduced pH\nincreased nut.")) +
+  labs(x = "Eelgrass treatment",
+       y = expression(paste("Change in Segment Area ("*cm^2*")")),
+       title = "A. Valida Choice Bulk Area Loss by Treatments") +
+  theme_bw(base_size = 20) +
+  theme(axis.text = element_text(color = "black"))
+boxplota1 
+```
+```{r}
+#Plot for area loss adjusted by total mass of AV
+boxplota2 <- ggplot(data = choicedata[choicedata$AV_control == "AV",],
+                    aes(x = treatment,
+                        y = area_change_adj,
+                        color = tankpH_treat)) +
+  geom_hline(yintercept = 0, 
+             color = "black",
+             size = 0.8) +
+  geom_boxplot(position = position_dodge(0.8),
+               size = 0.8) +
+  geom_point(position = position_dodge(0.8),
+             size = 2) +
+  scale_color_manual(name = expression(paste(italic("A. valida") ~ "pH")),
+                     breaks = c("ambient", "reduced"),
+                     values = c("grey70", "cyan4")) +
+  scale_x_discrete(breaks = c("A", "B", "C", "D"),
+                   labels = c("ambient pH\nambient nut.", "ambient pH\nincreased nut.",
+                              "reduced pH\nambient nut.", "reduced pH\nincreased nut.")) +
+  labs(x = "Eelgrass treatment",
+       y = expression(paste("Change in segment area ("*cm^2*"/ g AV)")),
+       title = "A. Valida Choice Adjusted Area Loss by Treatments") +
+  theme_bw(base_size = 20) +
+  theme(axis.text = element_text(color = "black"))
+boxplota2 
+```
+
+# Analysis 
+
+```{r}
+#bulk area loss analysis 
+
+hist((choicedata$area_change_adj[choicedata$AV_control == "AV"]))
+
+glmm2 <- lmer((area_change) ~ (pH_treat * nut_treat * tankpH_treat) + 
+                (1 | tank_ID:unit_ID) + (1 | plant_ID),
+              data = choicedata[choicedata$AV_control == "AV",])
+glmm2
+```
+```{r}
+shapiro.test(resid(glmm2)) #ns = good
+```
+```{r}
+hist(resid(glmm2))
+```
+```{r}
+plot(glmm2)
+
+```
+```{r}
+ggqqplot(resid(glmm2))
+
+```
+```{r}
+summary(glmm2, ddf = "Kenward-Roger")
+#cause data isnt normal? 
+
+```
+```{r}
+anova(glmm2, type = 3, ddf = "Kenward-Roger")
+```
+next, do analysis for adjusted 
+then go through the plots and analysis and comment on each of them. 
+

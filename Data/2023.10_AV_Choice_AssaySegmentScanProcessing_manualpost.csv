@@ -1,0 +1,241 @@
+section_ID,area_pre,area_post2,area_change,scan_page_pre,scan_page_post2,threshold_post,notes_pre,notes_post2
+1.1.1,3.664,3.719,0.055,Control_Reduced_1of3_pre,AV_choice_post_scan9,0,,shadows; used polygon tool
+1.1.10,3.659,3.662,0.003,AV_Reduced_3of3_pre,AV_choice_post_scan6,129,,shadows
+1.1.2,3.823,3.796,-0.027,AV_Reduced_1of3_pre,AV_choice_post_scan2,155,,
+1.1.3,3.8,3.837,0.037,Control_Ambient_1of3_pre,AV_choice_post_scan12,155,,
+1.1.4,3.788,3.821,0.033,AV_Ambient_3of3_pre,AV_choice_post_scan6,155,,
+1.1.5,3.785,3.782,-0.003,Control_Ambient_3of3_pre,AV_choice_post_scan1,155,,
+1.1.6,3.727,3.759,0.032,Control_Reduced_3of3_pre,AV_choice_post_scan11,155,,
+1.1.7,3.785,3.672,-0.113,AV_Reduced_3of3_pre,AV_choice_post_scan5,155,,multiple segments; added all segments areas to get overall area 
+1.1.8,3.749,3.758,0.009,AV_Ambient_1of3_pre,AV_choice_post_scan6,155,,
+1.1.9,3.715,3.801,0.086,Control_Ambient_2of3_pre,AV_choice_post_scan10,155,,
+1.4.1,3.81,3.405,-0.405,AV_Ambient_2of3_pre,AV_choice_post_scan2,155,,
+1.4.10,4.01,4.046,0.036,Control_Ambient_2of3_pre,AV_choice_post_scan9,130,,shadows
+1.4.2,3.999,4.028,0.029,Control_Reduced_3of3_pre,AV_choice_post_scan7,155,,
+1.4.3,4.052,3.921,-0.131,AV_Reduced_1of3_pre,AV_choice_post_scan3,139,,grazing and shadow
+1.4.4,4.014,3.994,-0.02,Control_Ambient_3of3_pre,AV_choice_post_scan8,133,,shadows
+1.4.5,4.011,3.95,-0.061,AV_Reduced_2of3_pre,AV_choice_post_scan1,155,,
+1.4.6,4.066,4.09,0.024,Control_Ambient_2of3_pre,AV_choice_post_scan12,155,,
+1.4.7,4.036,3.891,-0.145,AV_Ambient_1of3_pre,AV_choice_post_scan5,145,,shadows
+1.4.8,4.003,3.989,-0.014,AV_Reduced_3of3_pre,AV_choice_post_scan2,155,,
+1.4.9,3.962,4.01,0.048,Control_Ambient_3of3_pre,AV_choice_post_scan9,155,,
+10.1.1,3.473,3.424,-0.049,AV_Ambient_2of3_pre,AV_choice_post_scan2,155,,
+10.1.10,3.53,3.566,0.036,Control_Reduced_3of3_pre,AV_choice_post_scan12,155,,
+10.1.2,3.568,3.599,0.031,Control_Reduced_3of3_pre,AV_choice_post_scan7,155,,
+10.1.3,3.595,3.611,0.016,AV_Ambient_2of3_pre,AV_choice_post_scan3,155,,
+10.1.4,3.569,3.582,0.013,AV_Reduced_1of3_pre,AV_choice_post_scan3,132,,shadows
+10.1.5,3.553,3.525,-0.028,Control_Ambient_3of3_pre,AV_choice_post_scan1,155,,
+10.1.6,3.568,3.529,-0.039,AV_Ambient_3of3_pre,AV_choice_post_scan1,155,,
+10.1.7,3.591,3.6,0.009,Control_Ambient_2of3_pre,AV_choice_post_scan10,155,,
+10.1.8,3.53,3.534,0.004,Control_Reduced_2of3_pre,AV_choice_post_scan8,107,,shadows
+10.1.9,3.492,3.508,0.016,AV_Reduced_2of3_pre,AV_choice_post_scan5,125,,shadows
+10.3.1,3.614,3.686,0.072,Control_Reduced_1of3_pre,AV_choice_post_scan9,0,,shadows; used polygon tool
+10.3.10,3.84,3.841,0.001,Control_Reduced_2of3_pre,AV_choice_post_scan11,155,,
+10.3.2,3.752,3.737,-0.015,Control_Ambient_1of3_pre,AV_choice_post_scan7,0,,used polygon tool
+10.3.3,3.833,3.838,0.005,AV_Reduced_2of3_pre,AV_choice_post_scan2,155,,
+10.3.4,3.784,3.811,0.027,Control_Reduced_1of3_pre,AV_choice_post_scan11,155,,
+10.3.5,3.831,3.762,-0.069,AV_Reduced_2of3_pre,AV_choice_post_scan1,155,,
+10.3.6,3.835,3.885,0.05,Control_Reduced_3of3_pre,AV_choice_post_scan11,155,,
+10.3.7,3.821,3.83,0.009,AV_Ambient_1of3_pre,AV_choice_post_scan5,155,,
+10.3.8,3.818,3.83,0.012,Control_Ambient_2of3_pre,AV_choice_post_scan7,132,,shadows
+10.3.9,3.812,3.833,0.021,AV_Reduced_3of3_pre,AV_choice_post_scan6,155,,
+11.10.1,3.065,3.119,0.054,AV_Ambient_2of3_pre,AV_choice_post_scan2,155,,
+11.10.10,3.147,3.166,0.019,Control_Reduced_2of3_pre,AV_choice_post_scan11,155,,
+11.10.2,3.166,3.232,0.066,Control_Ambient_1of3_pre,AV_choice_post_scan12,155,,
+11.10.3,3.137,2.705,-0.432,AV_Ambient_2of3_pre,AV_choice_post_scan2,155,,
+11.10.4,3.21,2.247,-0.963,AV_Reduced_1of3_pre,AV_choice_post_scan3,164,,grazing
+11.10.5,3.212,3.166,-0.046,Control_Ambient_3of3_pre,AV_choice_post_scan1,132,,shadows
+11.10.6,3.113,3.169,0.056,Control_Reduced_2of3_pre,AV_choice_post_scan12,155,,
+11.10.7,3.203,1.516,-1.687,AV_Reduced_3of3_pre,AV_choice_post_scan5,155,,
+11.10.8,3.248,3.157,-0.091,Control_Ambient_2of3_pre,AV_choice_post_scan7,0,,used polygon tool; shadows
+11.10.9,3.176,3.179,0.003,AV_Reduced_2of3_pre,AV_choice_post_scan5,155,,
+11.2.1,3.422,3.464,0.042,Control_Reduced_1of3_pre,AV_choice_post_scan9,145,,shadows
+11.2.10,3.423,3.441,0.018,Control_Reduced_3of3_pre,AV_choice_post_scan12,155,,
+11.2.2,3.495,3.469,-0.026,AV_Reduced_1of3_pre,AV_choice_post_scan2,155,,
+11.2.3,3.543,3.552,0.009,Control_Reduced_1of3_pre,AV_choice_post_scan11,0,,shadows; used polygon tool
+11.2.4,3.544,3.583,0.039,Control_Ambient_3of3_pre,AV_choice_post_scan8,155,,
+11.2.5,3.503,3.188,-0.315,AV_Reduced_1of3_pre,AV_choice_post_scan7,0,,used polygon tool
+11.2.6,3.546,3.559,0.013,Control_Ambient_2of3_pre,AV_choice_post_scan12,125,,shadows
+11.2.7,3.606,3.515,-0.091,AV_Reduced_2of3_pre,AV_choice_post_scan1,155,,
+11.2.8,3.57,3.607,0.037,Control_Reduced_3of3_pre,AV_choice_post_scan8,155,,
+11.2.9,3.468,3.487,0.019,Control_Reduced_2of3_pre,AV_choice_post_scan7,0,,shadows; used polygon tool
+11.9.1,3.653,3.69,0.037,Control_Ambient_1of3_pre,AV_choice_post_scan10,155,,
+11.9.10,3.586,3.574,-0.012,AV_Reduced_3of3_pre,AV_choice_post_scan6,155,,
+11.9.2,3.567,3.544,-0.023,Control_Reduced_3of3_pre,AV_choice_post_scan7,155,,
+11.9.3,3.571,3.188,-0.383,AV_Reduced_1of3_pre,AV_choice_post_scan3,155,,
+11.9.4,3.543,3.339,-0.204,AV_Ambient_2of3_pre,AV_choice_post_scan5,0,,used polygon tool
+11.9.5,3.508,3.546,0.038,Control_Reduced_1of3_pre,AV_choice_post_scan11,155,,
+11.9.6,3.742,3.693,-0.049,Control_Reduced_3of3_pre,AV_choice_post_scan11,155,,
+11.9.7,3.616,3.62,0.004,AV_Ambient_1of3_pre,AV_choice_post_scan5,125,,shadows
+11.9.8,3.641,3.478,-0.163,AV_Ambient_3of3_pre,AV_choice_post_scan3,138,,grazing and shadow
+11.9.9,3.641,3.629,-0.012,Control_Ambient_2of3_pre,AV_choice_post_scan10,129,,shadows
+13.1.1,3.881,3.955,0.074,Control_Ambient_3of3_pre,AV_choice_post_scan9,155,,
+13.1.10,3.855,3.894,0.039,Control_Reduced_2of3_pre,AV_choice_post_scan11,0,,dust; used polygon tool
+13.1.2,3.891,3.906,0.015,Control_Ambient_1of3_pre,AV_choice_post_scan7,155,,
+13.1.3,4.003,3.389,-0.614,AV_Reduced_2of3_pre,AV_choice_post_scan2,142,,grazing
+13.1.4,4.103,4.123,0.02,AV_Ambient_2of3_pre,AV_choice_post_scan5,140,,shadows
+13.1.5,3.948,4.001,0.053,AV_Reduced_1of3_pre,AV_choice_post_scan7,155,,
+13.1.6,3.991,3.377,-0.614,AV_Ambient_3of3_pre,AV_choice_post_scan1,155,,
+13.1.7,3.934,3.901,-0.033,AV_Reduced_2of3_pre,AV_choice_post_scan1,155,,
+13.1.8,3.99,4.017,0.027,Control_Ambient_2of3_pre,AV_choice_post_scan7,155,,
+13.1.9,3.995,3.312,-0.683,AV_Ambient_1of3_pre,AV_choice_post_scan6,155,,
+13.6.1,3.692,3.672,-0.02,AV_Reduced_2of3_pre,AV_choice_post_scan4,155,,
+13.6.10,2.971,3.016,0.045,Control_Reduced_3of3_pre,AV_choice_post_scan12,155,really short segment - see post,
+13.6.2,3.696,3.75,0.054,AV_Ambient_3of3_pre,AV_choice_post_scan4,155,,
+13.6.3,3.546,3.562,0.016,AV_Ambient_2of3_pre,AV_choice_post_scan3,155,,
+13.6.4,3.668,3.769,0.101,Control_Reduced_1of3_pre,AV_choice_post_scan11,0,,watermarks; used polygon tool
+13.6.5,3.749,3.78,0.031,AV_Ambient_2of3_pre,AV_choice_post_scan4,139,,shadows
+13.6.6,3.715,3.739,0.024,AV_Reduced_3of3_pre,AV_choice_post_scan4,155,,
+13.6.7,3.837,3.882,0.045,Control_Ambient_2of3_pre,AV_choice_post_scan10,155,,
+13.6.8,3.652,3.708,0.056,Control_Reduced_2of3_pre,AV_choice_post_scan8,139,,shadows
+13.6.9,3.713,3.353,-0.36,AV_Reduced_3of3_pre,AV_choice_post_scan6,150,,shadows
+15.6.1,3.319,3.351,0.032,AV_Reduced_1of3_pre,AV_choice_post_scan3,138,,shadows
+15.6.10,3.287,3.326,0.039,Control_Ambient_2of3_pre,AV_choice_post_scan9,155,,
+15.6.2,3.343,2.962,-0.381,AV_Ambient_3of3_pre,AV_choice_post_scan4,155,,
+15.6.3,3.36,3.387,0.027,Control_Reduced_3of3_pre,AV_choice_post_scan12,125,,shadows
+15.6.4,3.442,3.432,-0.01,Control_Ambient_1of3_pre,AV_choice_post_scan10,155,,
+15.6.5,3.318,3.148,-0.17,AV_Ambient_2of3_pre,AV_choice_post_scan4,0,,shadows and grazing; used polygon tool
+15.6.6,3.335,3.336,0.001,AV_Ambient_1of3_pre,AV_choice_post_scan5,155,,
+15.6.7,3.289,3.318,0.029,Control_Ambient_3of3_pre,AV_choice_post_scan8,155,,
+15.6.8,3.32,2.488,-0.832,AV_Reduced_3of3_pre,AV_choice_post_scan2,155,,
+15.6.9,3.319,2.924,-0.395,AV_Reduced_3of3_pre,AV_choice_post_scan6,155,,
+17.10.1,4.014,4.072,0.058,Control_Ambient_3of3_pre,AV_choice_post_scan9,155,,
+17.10.10,4.205,4.137,-0.068,AV_Ambient_1of3_pre,AV_choice_post_scan1,155,,
+17.10.2,4.057,4.013,-0.044,AV_Reduced_1of3_pre,AV_choice_post_scan2,155,,
+17.10.3,4.079,4.102,0.023,Control_Reduced_3of3_pre,AV_choice_post_scan12,125,,shadows
+17.10.4,4.177,4.212,0.035,Control_Ambient_3of3_pre,AV_choice_post_scan8,0,,shadows; used polygon tool
+17.10.5,4.147,4.09,-0.057,AV_Reduced_2of3_pre,AV_choice_post_scan1,155,,
+17.10.6,4.143,4.224,0.081,Control_Ambient_2of3_pre,AV_choice_post_scan12,0,,dust; used polygon tool
+17.10.7,4.145,3.977,-0.168,AV_Reduced_2of3_pre,AV_choice_post_scan1,155,,
+17.10.8,4.132,4.19,0.058,Control_Reduced_2of3_pre,AV_choice_post_scan8,155,,
+17.10.9,4.18,4.179,-0.001,Control_Ambient_3of3_pre,AV_choice_post_scan9,155,,
+17.11.1,3.858,3.82,-0.038,AV_Reduced_2of3_pre,AV_choice_post_scan4,0,,shadows; used polygon tool
+17.11.10,4.036,4.091,0.055,Control_Reduced_3of3_pre,AV_choice_post_scan12,155,,
+17.11.2,3.851,3.9,0.049,Control_Reduced_1of3_pre,AV_choice_post_scan10,155,,
+17.11.3,3.921,3.952,0.031,Control_Ambient_1of3_pre,AV_choice_post_scan12,134,,shadows
+17.11.4,3.862,3.918,0.056,AV_Ambient_3of3_pre,AV_choice_post_scan6,155,,
+17.11.5,3.904,3.934,0.03,Control_Reduced_1of3_pre,AV_choice_post_scan11,155,,
+17.11.6,3.885,3.838,-0.047,AV_Ambient_3of3_pre,AV_choice_post_scan1,155,,
+17.11.7,3.877,3.845,-0.032,AV_Ambient_1of3_pre,AV_choice_post_scan5,155,,
+17.11.8,3.757,3.723,-0.034,AV_Reduced_3of3_pre,AV_choice_post_scan2,155,,
+17.11.9,3.972,4.003,0.031,Control_Ambient_2of3_pre,AV_choice_post_scan10,155,,
+21.10.1,2.826,2.887,0.061,Control_Ambient_3of3_pre,AV_choice_post_scan9,0,,shadows; used polygon tool
+21.10.10,3.055,3.046,-0.009,Control_Ambient_2of3_pre,AV_choice_post_scan9,132,,shadows
+21.10.2,2.999,3.061,0.062,Control_Reduced_1of3_pre,AV_choice_post_scan10,155,,
+21.10.3,3.065,2.588,-0.477,AV_Reduced_1of3_pre,AV_choice_post_scan3,162,,grazing
+21.10.4,3.065,3.073,0.008,Control_Ambient_3of3_pre,AV_choice_post_scan8,155,,
+21.10.5,3.121,3.079,-0.042,AV_Reduced_1of3_pre,AV_choice_post_scan7,0,,used polygon tool
+21.10.6,3.034,3.051,0.017,Control_Ambient_2of3_pre,AV_choice_post_scan12,155,,
+21.10.7,3.072,2.12,-0.952,AV_Reduced_3of3_pre,AV_choice_post_scan5,155,,
+21.10.8,3.07,3.089,0.019,Control_Reduced_3of3_pre,AV_choice_post_scan8,155,,
+21.10.9,3.077,2.416,-0.661,AV_Ambient_1of3_pre,AV_choice_post_scan6,155,,
+21.4.1,3.65,3.639,-0.011,Control_Ambient_1of3_pre,AV_choice_post_scan10,155,,
+21.4.10,3.779,3.63,-0.149,AV_Ambient_1of3_pre,AV_choice_post_scan1,155,,
+21.4.2,3.578,3.624,0.046,AV_Reduced_1of3_pre,AV_choice_post_scan2,155,,
+21.4.3,3.639,3.626,-0.013,Control_Reduced_3of3_pre,AV_choice_post_scan12,125,,shadows
+21.4.4,3.606,3.647,0.041,AV_Ambient_2of3_pre,AV_choice_post_scan5,155,,
+21.4.5,3.658,3.681,0.023,Control_Ambient_1of3_pre,AV_choice_post_scan9,155,,
+21.4.6,3.643,3.652,0.009,AV_Reduced_3of3_pre,AV_choice_post_scan4,137,,shadows
+21.4.7,3.517,3.685,0.168,Control_Reduced_2of3_pre,AV_choice_post_scan8,0,,shadows; used polygon tool
+21.4.8,3.706,3.065,-0.641,AV_Ambient_3of3_pre,AV_choice_post_scan3,131,,
+21.4.9,3.601,3.651,0.05,Control_Ambient_3of3_pre,AV_choice_post_scan9,146,,shadows
+24.11.1,3.656,3.665,0.009,AV_Reduced_2of3_pre,AV_choice_post_scan4,155,,
+24.11.10,3.653,3.602,-0.051,AV_Ambient_3of3_pre,AV_choice_post_scan4,155,,
+24.11.2,3.669,3.723,0.054,Control_Reduced_1of3_pre,AV_choice_post_scan10,155,,
+24.11.3,3.645,3.686,0.041,AV_Ambient_2of3_pre,AV_choice_post_scan3,155,auto tool picked up the border; outlined by hand,
+24.11.4,3.721,3.719,-0.002,AV_Ambient_3of3_pre,AV_choice_post_scan6,155,,
+24.11.5,3.686,3.723,0.037,Control_Ambient_1of3_pre,AV_choice_post_scan9,155,,
+24.11.6,3.743,3.728,-0.015,AV_Reduced_3of3_pre,AV_choice_post_scan4,155,,
+24.11.7,3.76,3.854,0.094,Control_Reduced_2of3_pre,AV_choice_post_scan8,155,,
+24.11.8,3.786,3.811,0.025,Control_Reduced_2of3_pre,AV_choice_post_scan8,155,,
+24.11.9,3.756,3.749,-0.007,AV_Ambient_1of3_pre,AV_choice_post_scan6,155,,
+24.6.1,2.947,3.002,0.055,Control_Ambient_3of3_pre,AV_choice_post_scan9,155,,
+24.6.10,3.435,3.383,-0.052,AV_Ambient_1of3_pre,AV_choice_post_scan1,155,,
+24.6.2,3.188,3.203,0.015,Control_Ambient_1of3_pre,AV_choice_post_scan7,0,,used polygon tool
+24.6.3,3.14,3.142,0.002,AV_Reduced_2of3_pre,AV_choice_post_scan2,155,,
+24.6.4,3.247,3.242,-0.005,Control_Reduced_1of3_pre,AV_choice_post_scan11,155,,
+24.6.5,3.223,3.166,-0.057,AV_Reduced_2of3_pre,AV_choice_post_scan1,155,,
+24.6.6,3.329,3.305,-0.024,AV_Ambient_3of3_pre,AV_choice_post_scan1,155,,
+24.6.7,3.305,3.336,0.031,Control_Ambient_2of3_pre,AV_choice_post_scan10,155,,
+24.6.8,3.343,3.32,-0.023,AV_Ambient_1of3_pre,AV_choice_post_scan6,137,,shadows
+24.6.9,3.322,3.375,0.053,Control_Ambient_3of3_pre,AV_choice_post_scan9,155,,
+26.7.1,3.784,3.785,0.001,AV_Reduced_2of3_pre,AV_choice_post_scan4,0,,shadows; used polygon tool
+26.7.10,3.835,3.497,-0.338,AV_Reduced_3of3_pre,AV_choice_post_scan6,0,,used polygon tool
+26.7.2,3.921,3.922,0.001,AV_Ambient_2of3_pre,AV_choice_post_scan2,155,auto tool picked up the border; outlined by hand,
+26.7.3,3.819,3.966,0.147,Control_Ambient_1of3_pre,AV_choice_post_scan12,0,,eelgrass touching label; used polygon tool
+26.7.4,3.859,3.775,-0.084,AV_Ambient_3of3_pre,AV_choice_post_scan6,0,,used polygon tool
+26.7.5,3.934,4,0.066,Control_Reduced_1of3_pre,AV_choice_post_scan11,0,,watermarks; used polygon tool
+26.7.6,3.923,3.856,-0.067,AV_Ambient_1of3_pre,AV_choice_post_scan5,138,,shadows
+26.7.7,3.879,3.886,0.007,Control_Ambient_3of3_pre,AV_choice_post_scan8,0,,shadows; used polygon tool
+26.7.8,3.869,3.527,-0.342,AV_Reduced_3of3_pre,AV_choice_post_scan2,155,,
+26.7.9,3.876,3.882,0.006,Control_Reduced_2of3_pre,AV_choice_post_scan7,125,,shadows
+26.9.1,3.323,3.104,-0.219,AV_Reduced_1of3_pre,AV_choice_post_scan3,0,,used polygon tool
+26.9.10,3.494,3.495,0.001,AV_Ambient_3of3_pre,AV_choice_post_scan4,155,,
+26.9.2,3.407,3.384,-0.023,AV_Ambient_3of3_pre,AV_choice_post_scan4,143,,shadows
+26.9.3,3.503,3.555,0.052,Control_Reduced_1of3_pre,AV_choice_post_scan11,155,,
+26.9.4,3.508,3.544,0.036,Control_Ambient_1of3_pre,AV_choice_post_scan10,155,,
+26.9.5,3.556,3.502,-0.054,AV_Ambient_2of3_pre,AV_choice_post_scan4,129,,"grazing, and shadow from watermarks "
+26.9.6,3.522,3.544,0.022,Control_Reduced_2of3_pre,AV_choice_post_scan12,155,,
+26.9.7,3.59,3.531,-0.059,AV_Reduced_2of3_pre,AV_choice_post_scan1,126,,grazing
+26.9.8,3.577,3.284,-0.293,AV_Ambient_1of3_pre,AV_choice_post_scan6,155,,
+26.9.9,3.504,3.568,0.064,Control_Ambient_2of3_pre,AV_choice_post_scan10,0,,shadows; used polygon tool
+28.11.1,3.271,3.385,0.114,Control_Reduced_1of3_pre,AV_choice_post_scan9,0,,shadows; used polygon tool
+28.11.10,3.748,3.77,0.022,AV_Reduced_3of3_pre,AV_choice_post_scan6,155,,
+28.11.2,3.506,3.433,-0.073,AV_Ambient_2of3_pre,AV_choice_post_scan2,155,,
+28.11.3,3.609,3.625,0.016,AV_Reduced_1of3_pre,AV_choice_post_scan3,155,,
+28.11.4,3.651,3.735,0.084,Control_Ambient_1of3_pre,AV_choice_post_scan10,155,,
+28.11.5,3.787,3.769,-0.018,AV_Reduced_1of3_pre,AV_choice_post_scan7,155,,
+28.11.6,3.741,3.786,0.045,Control_Reduced_3of3_pre,AV_choice_post_scan11,155,,
+28.11.7,3.822,3.856,0.034,AV_Reduced_3of3_pre,AV_choice_post_scan5,155,,
+28.11.8,3.759,3.776,0.017,Control_Ambient_2of3_pre,AV_choice_post_scan7,155,,
+28.11.9,3.757,3.772,0.015,Control_Reduced_2of3_pre,AV_choice_post_scan7,134,,shadows
+28.3.1,3.757,3.792,0.035,AV_Reduced_1of3_pre,AV_choice_post_scan3,155,,
+28.3.10,3.841,3.909,0.068,Control_Reduced_2of3_pre,AV_choice_post_scan11,155,,
+28.3.2,3.943,3.982,0.039,Control_Ambient_1of3_pre,AV_choice_post_scan7,0,,used polygon tool
+28.3.3,3.929,3.774,-0.155,AV_Ambient_2of3_pre,AV_choice_post_scan3,162,,grazing
+28.3.4,4.012,4.045,0.033,Control_Reduced_1of3_pre,AV_choice_post_scan11,155,,
+28.3.5,3.939,3.967,0.028,AV_Ambient_2of3_pre,AV_choice_post_scan4,155,,
+28.3.6,3.996,3.971,-0.025,AV_Ambient_1of3_pre,AV_choice_post_scan5,155,,eelgrass touching label; used polygon tool
+28.3.7,3.981,3.998,0.017,Control_Ambient_3of3_pre,AV_choice_post_scan8,131,,shadows
+28.3.8,3.928,3.355,-0.573,AV_Ambient_3of3_pre,AV_choice_post_scan3,142,,grazing
+28.3.9,3.93,3.891,-0.039,AV_Reduced_2of3_pre,AV_choice_post_scan5,155,,
+4.6.1,3.747,3.839,0.092,AV_Ambient_2of3_pre,AV_choice_post_scan2,173,,shadows
+4.6.10,3.836,3.874,0.038,Control_Ambient_2of3_pre,AV_choice_post_scan9,0,,shadows; used polygon tool
+4.6.2,3.947,3.951,0.004,AV_Ambient_3of3_pre,AV_choice_post_scan4,155,,
+4.6.3,3.912,4.019,0.107,Control_Reduced_1of3_pre,AV_choice_post_scan11,155,,
+4.6.4,3.895,3.93,0.035,AV_Reduced_1of3_pre,AV_choice_post_scan3,155,,
+4.6.5,3.889,3.924,0.035,Control_Ambient_1of3_pre,AV_choice_post_scan9,142,,shadows
+4.6.6,3.906,3.982,0.076,Control_Reduced_2of3_pre,AV_choice_post_scan12,155,,
+4.6.7,3.896,4.007,0.111,Control_Reduced_2of3_pre,AV_choice_post_scan8,155,,
+4.6.8,3.861,3.399,-0.462,AV_Ambient_1of3_pre,AV_choice_post_scan6,155,,
+4.6.9,3.795,3.802,0.007,AV_Reduced_3of3_pre,AV_choice_post_scan6,155,,
+4.7.1,3.955,3.955,0,Control_Ambient_1of3_pre,AV_choice_post_scan10,155,,
+4.7.10,3.705,3.685,-0.02,AV_Ambient_3of3_pre,AV_choice_post_scan4,155,,
+4.7.2,3.638,3.675,0.037,Control_Reduced_3of3_pre,AV_choice_post_scan7,155,,
+4.7.3,3.792,3.732,-0.06,AV_Reduced_2of3_pre,AV_choice_post_scan2,171,,grazing
+4.7.4,3.758,3.442,-0.316,AV_Ambient_2of3_pre,AV_choice_post_scan5,155,,
+4.7.5,3.804,3.765,-0.039,Control_Ambient_3of3_pre,AV_choice_post_scan1,155,,
+4.7.6,3.708,3.68,-0.028,AV_Reduced_3of3_pre,AV_choice_post_scan4,155,,
+4.7.7,3.822,3.855,0.033,Control_Ambient_2of3_pre,AV_choice_post_scan10,155,,
+4.7.8,3.677,3.738,0.061,Control_Reduced_3of3_pre,AV_choice_post_scan8,155,,
+4.7.9,3.798,3.792,-0.006,AV_Ambient_1of3_pre,AV_choice_post_scan6,155,,
+7.11.1,3.566,3.621,0.055,Control_Ambient_1of3_pre,AV_choice_post_scan10,155,,
+7.11.10,3.718,3.746,0.028,AV_Ambient_3of3_pre,AV_choice_post_scan4,148,,shadows
+7.11.2,3.618,3.588,-0.03,AV_Ambient_2of3_pre,AV_choice_post_scan2,155,,
+7.11.3,3.688,3.729,0.041,Control_Reduced_1of3_pre,AV_choice_post_scan11,162,,dust; used polygon tool
+7.11.4,3.84,3.86,0.02,Control_Ambient_1of3_pre,AV_choice_post_scan10,0,,dust; used polygon tool
+7.11.5,3.728,3.811,0.083,Control_Reduced_1of3_pre,AV_choice_post_scan11,0,,watermarks; used polygon tool
+7.11.6,3.847,3.357,-0.49,AV_Ambient_1of3_pre,AV_choice_post_scan5,155,,
+7.11.7,3.897,3.961,0.064,Control_Ambient_3of3_pre,AV_choice_post_scan8,155,,
+7.11.8,3.679,3.686,0.007,AV_Ambient_3of3_pre,AV_choice_post_scan3,155,,
+7.11.9,3.605,3.66,0.055,Control_Reduced_2of3_pre,AV_choice_post_scan7,155,,
+7.8.1,3.616,3.626,0.01,AV_Reduced_1of3_pre,AV_choice_post_scan3,162,,grazing
+7.8.10,4.132,4.118,-0.014,AV_Ambient_1of3_pre,AV_choice_post_scan1,155,,
+7.8.2,3.867,3.917,0.05,Control_Reduced_1of3_pre,AV_choice_post_scan10,155,,
+7.8.3,3.833,3.852,0.019,Control_Reduced_3of3_pre,AV_choice_post_scan12,125,,shadows
+7.8.4,3.947,3.953,0.006,AV_Reduced_1of3_pre,AV_choice_post_scan3,143,,shadows
+7.8.5,4.004,4.037,0.033,Control_Ambient_1of3_pre,AV_choice_post_scan9,155,,
+7.8.6,3.774,3.823,0.049,Control_Reduced_2of3_pre,AV_choice_post_scan12,155,,
+7.8.7,3.755,3.776,0.021,Control_Reduced_2of3_pre,AV_choice_post_scan8,155,,
+7.8.8,3.967,4.023,0.056,Control_Reduced_3of3_pre,AV_choice_post_scan8,0,,shadows; used polygon tool
+7.8.9,3.941,3.625,-0.316,AV_Reduced_2of3_pre,AV_choice_post_scan5,136,,shadows
