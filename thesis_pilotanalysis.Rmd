@@ -1,12 +1,32 @@
 ---
-title: "The effects of ocean acidification and nutrient additions on invasive amphipod herbivory of Zostera marina (eelgrass) in San Francisco Bay"
+title: The effects of ocean acidification and increased nutrients on invasive amphipod
+  herbivory of Zostera marina (eelgrass) in San Francisco Bay
 author: "Amy Yoger"
 date: "2024-05-06"
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
 ---
 
-# Introduction
-write here for your project! 
+## Aim: 
+
+Examine the impact of ocean acidification and increased nutrients on Ampithoe valida consumption of eelgrass plant tissue.
+
+### Hypothesis: 
+
+a. A. valida will exhibit increased rates of consumption on eelgrass grown in higher nutrient conditions due to increased plant palatability of eelgrass and algae via reduced C:N ratios. 
+b. A. valida exposed to low pH conditions will exhibit higher rates of consumption due to unknown physiological changes that alter the amphipods.
+
+
+### Null Hypothesis:
+
+A. valida will exhibit no change in rates of consumption on eelgrass grown in high nutrient and low pH bay conditions than eelgrass grown in ambient bay conditions. 
+
+## Statistical Approach: (Rough Draft)
+
+A Generalized Linear Mixed Model was used to include both fixed and random effects in the experiment. A Shapiro-wilks normality test showed that the data was not normal (p-value= 1.086e-08.) The "Kenward Roger's F test" method was used to calculate the degrees of freedom in the statistical analysis. I performed an ANOVA test with Kenward Roger's method and there were no significant interactions between treatments. There was one interaction that was had a slightly significant effect on A.valida consumption and that was between eelgrass nutrient treatment (ambient or reduced) and A.valida pH treatment (ambient or reduced), p-value= 0.06. (We see this interaction in..reference plots. )
+
+## Code in R
 
 ```{r load-packages, message=FALSE}
 library(tidyverse)
@@ -20,7 +40,7 @@ library(lmerTest)
 
 # Data Preparation & Plots in R
 
-```{r}
+```{r 1}
 #set working directory 
 setwd("~/Library/Mobile Documents/com~apple~CloudDocs/SFSU/Thesis/My Thesis/Git-Hub/NSF Pilot Project/thesis_pilot")
 
@@ -34,7 +54,6 @@ choicedat2 <- read.csv("~/Library/Mobile Documents/com~apple~CloudDocs/SFSU/Thes
 choicedat2man <- read.csv("~/Library/Mobile Documents/com~apple~CloudDocs/SFSU/Thesis/My Thesis/Git-Hub/NSF Pilot Project/thesis_pilot/Data/2023.10_AV_Choice_AssaySegmentScanProcessing_manualpost.csv")
 
 avmassdat <- read.csv("~/Library/Mobile Documents/com~apple~CloudDocs/SFSU/Thesis/My Thesis/Git-Hub/NSF Pilot Project/thesis_pilot/Data/2023.10.27_AV_Choice_AVmasspercontainer.csv")
-
 
 #data preparation 
 choiceid <- choicei %>% 
@@ -69,7 +88,7 @@ choicedata <- left_join(choiceid, choicedat) %>%
 
 # Plots
 
-```{r}
+```{r 2}
 # **Plots for Eelgrass Area**
 
 #bulk area loss for AV *not control, not adjusted*
@@ -77,17 +96,18 @@ boxplota1 <- ggplot(data = choicedata[choicedata$AV_control == "AV",],
                     aes(x = treatment,
                         y = area_change,
                         color = tankpH_treat)) +
+  introdataviz::geom_split_violin(alpha = .5, trim = FALSE) +
   geom_hline(yintercept = 0, 
              color = "black",
              size = 0.8) +
   geom_boxplot(position = position_dodge(0.8),
-               size = 0.8) +
+               size = 0.5) +
   geom_point(position = position_dodge(0.8),
-             size = 2) +
-   geom_text(aes(label = area_change), 
-            position = position_dodge(0.8),
-            vjust = -0.5, 
-            size = 3) + # Adjust position and size of text
+             size = 1)  +
+   # geom_text(aes(label = area_change), 
+   #          position = position_dodge(0.8),
+   #          vjust = -0.5, 
+   #          size = 3) + # Adjust position and size of text
   scale_color_manual(name = expression(paste(italic("A. valida") ~ "pH")),
                      breaks = c("ambient", "reduced"),
                      values = c("grey70", "cyan4")) +
@@ -98,10 +118,31 @@ boxplota1 <- ggplot(data = choicedata[choicedata$AV_control == "AV",],
        y = expression(paste("Change in Segment Area ("*cm^2*")")),
        title = "A. Valida Choice Bulk Area Loss by Treatments") +
   theme_bw(base_size = 20) +
-  theme(axis.text = element_text(color = "black"))
+  theme(axis.text = element_text(color = "black", size = 10))+
+   theme(plot.title = element_text(size = 14))
 boxplota1 
 ```
-```{r}
+```{r 3}
+## trying a violin plot out for fun! 
+# ggplot(data = choicedata[choicedata$AV_control == "AV",],
+#                     aes(x = treatment,
+#                         y = area_change,
+#                         color = tankpH_treat)) +
+#   introdataviz::geom_split_violin(alpha = .5, trim = FALSE)+
+#   geom_boxplot(width=0.1) + theme_minimal() +
+#   scale_x_discrete(breaks = c("A", "B", "C", "D"),
+#                    labels = c("ambient pH\nambient nut.", "ambient pH\nincreased nut.",
+#                               "reduced pH\nambient nut.", "reduced pH\nincreased nut.")) +
+#   labs(x = "Eelgrass treatment",
+#        y = expression(paste("Change in Segment Area ("*cm^2*")")),
+#        title = "A. Valida Choice Bulk Area Loss by Treatments")+
+#   scale_color_manual(name = expression(paste(italic("A. valida") ~ "pH")),
+#        breaks = c("ambient", "reduced")
+       
+```
+
+
+```{r 4}
 #Plot for area loss adjusted by total mass of AV
 boxplota2 <- ggplot(data = choicedata[choicedata$AV_control == "AV",],
                     aes(x = treatment,
@@ -110,9 +151,9 @@ boxplota2 <- ggplot(data = choicedata[choicedata$AV_control == "AV",],
   geom_hline(yintercept = 0, 
              color = "black",
              size = 0.8) +
-  geom_boxplot(position = position_dodge(0.8),
+  geom_boxplot(position = position_dodge(0.9),
                size = 0.8) +
-  geom_point(position = position_dodge(0.8),
+  geom_point(position = position_dodge(0.9),
              size = 2) +
   scale_color_manual(name = expression(paste(italic("A. valida") ~ "pH")),
                      breaks = c("ambient", "reduced"),
@@ -124,13 +165,16 @@ boxplota2 <- ggplot(data = choicedata[choicedata$AV_control == "AV",],
        y = expression(paste("Change in segment area ("*cm^2*"/ g AV)")),
        title = "A. Valida Choice Adjusted Area Loss by Treatments") +
   theme_bw(base_size = 20) +
-  theme(axis.text = element_text(color = "black"))
+  theme(axis.text = element_text(color = "black", size=10))+
+  theme(plot.title = element_text(size = 14))
 boxplota2 
 ```
 
+
 # Analysis 
 
-```{r}
+
+```{r 5}
 #bulk area loss analysis 
 
 hist((choicedata$area_change_adj[choicedata$AV_control == "AV"]))
@@ -140,28 +184,35 @@ glmm2 <- lmer((area_change) ~ (pH_treat * nut_treat * tankpH_treat) +
               data = choicedata[choicedata$AV_control == "AV",])
 glmm2
 ```
-```{r}
+```{r 6}
+#use the shapiro test
 shapiro.test(resid(glmm2)) #ns = good
 ```
-```{r}
+```{r 7}
+#plot the residuals
 hist(resid(glmm2))
 ```
 ```{r}
 plot(glmm2)
 
 ```
-```{r}
+```{r 8}
 ggqqplot(resid(glmm2))
 
 ```
-```{r}
+```{r 9}
+#use the Kenward-Roger test to find degrees of freedom 
+
 summary(glmm2, ddf = "Kenward-Roger")
-#cause data isnt normal? 
 
 ```
-```{r}
+```{r 10}
+#ANOVA for hypothesis testing using the Kenward-roger method 
 anova(glmm2, type = 3, ddf = "Kenward-Roger")
 ```
+
+## Notes
+
 next, do analysis for adjusted 
 then go through the plots and analysis and comment on each of them. 
 
