@@ -8,6 +8,10 @@ output:
   html_document: default
 ---
 
+# Introduction: 
+
+  Seagrasses provide valuable ecosystem functions, yet they are declining globally due to environmental and anthropogenic stressors. To fully understand how stressors influence seagrass habitats, it is essential to test how global climate stressors like ocean acidification will interact with local environmental conditions (e.g. increased nutrient pollution) to affect ecosystem functions and key trophic relationships. In San Francisco Bay, it is unknown how stressor interactions will affect the feeding behavior of Ampithoe valida, an invasive amphipod who negatively impacts the local seagrass, Zostera marina (eelgrass), by directly feeding on its tissue. To further understand this relationship, my research will first assess A. valida food preferences to varying ages of eelgrass and epiphytic algae across various sizes of A.valida. Secondly, I will expose A. valida and eelgrass to levels of ocean acidification expected with accelerating climate change, combined with levels of nutrient pollution that are observed along populated coastlines, to test if these combined stressors affect A. valida herbivory of eelgrass. I expect that A.valida age and size will effect A. valida feeding preferences, with larger, older A.valida preferring older plant tissue, and younger, smaller individuals grazing on epiphytic algae. I also anticipate that exposure to stressors will modify A. valida's herbivory of eelgrass, with low pH combined with high nutrient conditions potentially leading to increased A. valida consumption. These results will advance our understanding of A.valida impact on eelgrass meadows, informing potential shifts in feeding patterns amidst future environmental changes, and guiding effective eelgrass conservation and restoration efforts in San Francisco Bay.
+  
 ## Aim: 
 
 Examine the impact of ocean acidification and increased nutrients on Ampithoe valida consumption of eelgrass plant tissue.
@@ -22,11 +26,13 @@ b. A. valida exposed to low pH conditions will exhibit higher rates of consumpti
 
 A. valida will exhibit no change in rates of consumption on eelgrass grown in high nutrient and low pH bay conditions than eelgrass grown in ambient bay conditions. 
 
-## Statistical Approach: (Rough Draft)
+## Dataset Description 
 
-A Generalized Linear Mixed Model was used to include both fixed and random effects in the experiment. A Shapiro-wilks normality test showed that the data was not normal (p-value= 1.086e-08.) The "Kenward Roger's F test" method was used to calculate the degrees of freedom in the statistical analysis. I performed an ANOVA test with Kenward Roger's method and there were no significant interactions between treatments. There was one interaction that was had a slightly significant effect on A.valida consumption and that was between eelgrass nutrient treatment (ambient or reduced) and A.valida pH treatment (ambient or reduced), p-value= 0.06. (We see this interaction in..reference plots. )
+In Fall 2023, the SFSU Boyer Lab conducted a pilot project to collect preliminary data for a larger NSF project and my thesis research. The pilot project examined the impact of increased nutrients and reduced pH on Ampithoe valida herbivory of eelgrass tissue. We exposed eelgrass and A.valida to four different treatment conditions for thirty days and consecutively conducted "choice" feeding assays to determine A. valida feeding preferences when they are given eelgrass from each treatment at the same time. Assays ran until there was a 50% reduction in eelgrass from feeding. There were 60 choice containers with 12 A. valida and four pieces of eelgrass, one per treatment. Controls consisted of 60 choice containers with only eelgrass pieces and no A.valida to account for eelgrass changes in the container beyond the presence of A. valida.
 
-## Code in R
+###Github repository link: 
+
+## Analysis in R 
 
 ```{r load-packages, message=FALSE}
 library(tidyverse)
@@ -38,7 +44,7 @@ library(ggpubr)
 library(lmerTest)
 ```
 
-# Data Preparation & Plots in R
+## Data Preparation & Plots in R
 
 ```{r 1}
 #set working directory 
@@ -96,7 +102,7 @@ boxplota1 <- ggplot(data = choicedata[choicedata$AV_control == "AV",],
                     aes(x = treatment,
                         y = area_change,
                         color = tankpH_treat)) +
-  introdataviz::geom_split_violin(alpha = .5, trim = FALSE) +
+  #introdataviz::geom_split_violin(alpha = .5, trim = FALSE) +
   geom_hline(yintercept = 0, 
              color = "black",
              size = 0.8) +
@@ -110,69 +116,20 @@ boxplota1 <- ggplot(data = choicedata[choicedata$AV_control == "AV",],
    #          size = 3) + # Adjust position and size of text
   scale_color_manual(name = expression(paste(italic("A. valida") ~ "pH")),
                      breaks = c("ambient", "reduced"),
-                     values = c("grey70", "cyan4")) +
+                     values = c("cyan4", "red4")) +
   scale_x_discrete(breaks = c("A", "B", "C", "D"),
                    labels = c("ambient pH\nambient nut.", "ambient pH\nincreased nut.",
                               "reduced pH\nambient nut.", "reduced pH\nincreased nut.")) +
   labs(x = "Eelgrass treatment",
        y = expression(paste("Change in Segment Area ("*cm^2*")")),
        title = "A. Valida Choice Bulk Area Loss by Treatments") +
-  theme_bw(base_size = 20) +
-  theme(axis.text = element_text(color = "black", size = 10))+
-   theme(plot.title = element_text(size = 14))
+  theme_bw(base_size = 14) +
+  theme(axis.text = element_text(color = "black", size = 12))+
+   theme(plot.title = element_text(size = 16))
 boxplota1 
 ```
-```{r 3}
-## trying a violin plot out for fun! 
-# ggplot(data = choicedata[choicedata$AV_control == "AV",],
-#                     aes(x = treatment,
-#                         y = area_change,
-#                         color = tankpH_treat)) +
-#   introdataviz::geom_split_violin(alpha = .5, trim = FALSE)+
-#   geom_boxplot(width=0.1) + theme_minimal() +
-#   scale_x_discrete(breaks = c("A", "B", "C", "D"),
-#                    labels = c("ambient pH\nambient nut.", "ambient pH\nincreased nut.",
-#                               "reduced pH\nambient nut.", "reduced pH\nincreased nut.")) +
-#   labs(x = "Eelgrass treatment",
-#        y = expression(paste("Change in Segment Area ("*cm^2*")")),
-#        title = "A. Valida Choice Bulk Area Loss by Treatments")+
-#   scale_color_manual(name = expression(paste(italic("A. valida") ~ "pH")),
-#        breaks = c("ambient", "reduced")
-       
-```
 
-
-```{r 4}
-#Plot for area loss adjusted by total mass of AV
-boxplota2 <- ggplot(data = choicedata[choicedata$AV_control == "AV",],
-                    aes(x = treatment,
-                        y = area_change_adj,
-                        color = tankpH_treat)) +
-  geom_hline(yintercept = 0, 
-             color = "black",
-             size = 0.8) +
-  geom_boxplot(position = position_dodge(0.9),
-               size = 0.8) +
-  geom_point(position = position_dodge(0.9),
-             size = 2) +
-  scale_color_manual(name = expression(paste(italic("A. valida") ~ "pH")),
-                     breaks = c("ambient", "reduced"),
-                     values = c("grey70", "cyan4")) +
-  scale_x_discrete(breaks = c("A", "B", "C", "D"),
-                   labels = c("ambient pH\nambient nut.", "ambient pH\nincreased nut.",
-                              "reduced pH\nambient nut.", "reduced pH\nincreased nut.")) +
-  labs(x = "Eelgrass treatment",
-       y = expression(paste("Change in segment area ("*cm^2*"/ g AV)")),
-       title = "A. Valida Choice Adjusted Area Loss by Treatments") +
-  theme_bw(base_size = 20) +
-  theme(axis.text = element_text(color = "black", size=10))+
-  theme(plot.title = element_text(size = 14))
-boxplota2 
-```
-
-
-# Analysis 
-
+# Statistical Analysis 
 
 ```{r 5}
 #bulk area loss analysis 
@@ -184,35 +141,43 @@ glmm2 <- lmer((area_change) ~ (pH_treat * nut_treat * tankpH_treat) +
               data = choicedata[choicedata$AV_control == "AV",])
 glmm2
 ```
+
+
 ```{r 6}
 #use the shapiro test
 shapiro.test(resid(glmm2)) #ns = good
 ```
+
 ```{r 7}
 #plot the residuals
 hist(resid(glmm2))
 ```
+
 ```{r}
 plot(glmm2)
-
 ```
+
 ```{r 8}
 ggqqplot(resid(glmm2))
 
 ```
+
 ```{r 9}
 #use the Kenward-Roger test to find degrees of freedom 
 
 summary(glmm2, ddf = "Kenward-Roger")
 
 ```
+
 ```{r 10}
 #ANOVA for hypothesis testing using the Kenward-roger method 
 anova(glmm2, type = 3, ddf = "Kenward-Roger")
 ```
 
-## Notes
+## Results 
 
-next, do analysis for adjusted 
-then go through the plots and analysis and comment on each of them. 
+A Generalized Linear Mixed Model was used to include both fixed and random effects in the experiment. A Shapiro-wilks normality test showed that the data was not normal (p-value= 1.086e-08.) The "Kenward Roger's F test" method was used to calculate the degrees of freedom in the statistical analysis. I performed an ANOVA test with Kenward Roger's method and there were no significant interactions between treatments. There was one interaction that was had a slightly significant effect on A.valida consumption and that was between eelgrass nutrient treatment (ambient or reduced) and A.valida pH treatment (ambient or reduced), p-value= 0.06. 
+
+## Discussion
+
 
