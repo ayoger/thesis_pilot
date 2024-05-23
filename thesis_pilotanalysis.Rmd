@@ -1,6 +1,6 @@
 ---
 title: The effects of ocean acidification and increased nutrients on invasive amphipod
-  herbivory of Zostera marina (eelgrass) in San Francisco Bay
+  herbivory of _Zostera marina_ (eelgrass) in San Francisco Bay
 author: "Amy Yoger"
 date: "2024-05-06"
 output:
@@ -8,29 +8,29 @@ output:
   html_document: default
 ---
 
-# Introduction: 
+## Introduction: 
 
-  Seagrasses provide valuable ecosystem functions, yet they are declining globally due to environmental and anthropogenic stressors. To fully understand how stressors influence seagrass habitats, it is essential to test how global climate stressors like ocean acidification will interact with local environmental conditions (e.g. increased nutrient pollution) to affect ecosystem functions and key trophic relationships. In San Francisco Bay, it is unknown how stressor interactions will affect the feeding behavior of Ampithoe valida, an invasive amphipod who negatively impacts the local seagrass, Zostera marina (eelgrass), by directly feeding on its tissue. To further understand this relationship, my research will first assess A. valida food preferences to varying ages of eelgrass and epiphytic algae across various sizes of A.valida. Secondly, I will expose A. valida and eelgrass to levels of ocean acidification expected with accelerating climate change, combined with levels of nutrient pollution that are observed along populated coastlines, to test if these combined stressors affect A. valida herbivory of eelgrass. I expect that A.valida age and size will effect A. valida feeding preferences, with larger, older A.valida preferring older plant tissue, and younger, smaller individuals grazing on epiphytic algae. I also anticipate that exposure to stressors will modify A. valida's herbivory of eelgrass, with low pH combined with high nutrient conditions potentially leading to increased A. valida consumption. These results will advance our understanding of A.valida impact on eelgrass meadows, informing potential shifts in feeding patterns amidst future environmental changes, and guiding effective eelgrass conservation and restoration efforts in San Francisco Bay.
+  Seagrasses provide valuable ecosystem functions, yet they are declining globally due to environmental and anthropogenic stressors. To fully understand how stressors influence seagrass habitats, it is essential to test how global climate stressors like ocean acidification will interact with local environmental conditions (e.g. increased nutrient pollution) to affect ecosystem functions and key trophic relationships. In San Francisco Bay, it is unknown how stressor interactions will affect the feeding behavior of _Ampithoe valida_, an invasive amphipod who negatively impacts the local seagrass, _Zostera marina_ (eelgrass), by directly feeding on its tissue. To further understand this relationship, we exposed _A. valida_ and eelgrass to levels of ocean acidification expected with accelerating climate change, combined with levels of nutrient pollution that are observed along populated coastlines, to test if these combined stressors affect _A. valida_ herbivory of eelgrass. We expected that exposure to stressors will modify _A. valida_ herbivory of eelgrass, with low pH combined with high nutrient conditions potentially leading to increased _A. valida_ consumption. These results will advance our understanding of _A.valida_ impact on eelgrass meadows, informing potential shifts in feeding patterns amidst future environmental changes, and guiding effective eelgrass conservation and restoration efforts in San Francisco Bay.
   
 ## Aim: 
 
-Examine the impact of ocean acidification and increased nutrients on Ampithoe valida consumption of eelgrass plant tissue.
+Examine the impact of ocean acidification and increased nutrients on _Ampithoe valida_ consumption of eelgrass plant tissue.
 
 ### Hypothesis: 
 
-a. A. valida will exhibit increased rates of consumption on eelgrass grown in higher nutrient conditions due to increased plant palatability of eelgrass and algae via reduced C:N ratios. 
-b. A. valida exposed to low pH conditions will exhibit higher rates of consumption due to unknown physiological changes that alter the amphipods.
+a. _A. valida_ will exhibit increased rates of consumption on eelgrass grown in higher nutrient conditions due to increased plant palatability of eelgrass and algae via reduced C:N ratios. 
+b. _A. valida_ exposed to low pH conditions will exhibit higher rates of consumption due to unknown physiological changes that alter the amphipods.
 
 
 ### Null Hypothesis:
 
-A. valida will exhibit no change in rates of consumption on eelgrass grown in high nutrient and low pH bay conditions than eelgrass grown in ambient bay conditions. 
+_A. valida_ will exhibit no change in rates of consumption on eelgrass grown in high nutrient and low pH bay conditions than eelgrass grown in ambient bay conditions. 
 
-## Dataset Description 
+## Dataset Description & Approach
 
-In Fall 2023, the SFSU Boyer Lab conducted a pilot project to collect preliminary data for a larger NSF project and my thesis research. The pilot project examined the impact of increased nutrients and reduced pH on Ampithoe valida herbivory of eelgrass tissue. We exposed eelgrass and A.valida to four different treatment conditions for thirty days and consecutively conducted "choice" feeding assays to determine A. valida feeding preferences when they are given eelgrass from each treatment at the same time. Assays ran until there was a 50% reduction in eelgrass from feeding. There were 60 choice containers with 12 A. valida and four pieces of eelgrass, one per treatment. Controls consisted of 60 choice containers with only eelgrass pieces and no A.valida to account for eelgrass changes in the container beyond the presence of A. valida.
+In Fall 2023, the SFSU Boyer Lab conducted a pilot project to collect preliminary data for a larger NSF project and my thesis research. This pilot project examined the impact of increased nutrients and reduced pH on _Ampithoe valida_ herbivory of eelgrass tissue. To do this, we exposed eelgrass to four different treatment conditions, and _A.valida_ to either reduced or ambient pH conditions, for thirty days. We consecutively conducted "choice" feeding assays to determine _A. valida_ feeding preferences when _A.valida_ from both treatments (ambient pH and reduced pH) are given eelgrass from each eelgrass treatment at the same time. Assays ran until there was a 50% reduction in eelgrass in the containers. There were 60 choice containers with 12 _A. valida_ individuas in each container and four pieces of eelgrass, one per treatment. Control containers consisted of 60 choice containers with only eelgrass pieces and no _A.valida_ to account for eelgrass changes in the container beyond the presence of _A. valida_.
 
-###Github repository link: 
+## Github repository link: https://github.com/ayoger/thesis_pilot
 
 ## Analysis in R 
 
@@ -47,28 +47,29 @@ library(lmerTest)
 ## Data Preparation & Plots in R
 
 ```{r 1}
-#set working directory 
-setwd("~/Library/Mobile Documents/com~apple~CloudDocs/SFSU/Thesis/My Thesis/Git-Hub/NSF Pilot Project/thesis_pilot")
 
-#import data
-choicei <- read.csv("~/Library/Mobile Documents/com~apple~CloudDocs/SFSU/Thesis/My Thesis/Git-Hub/NSF Pilot Project/thesis_pilot/Data/2023.10_Feeding Assays_Choice_IDs.csv")
+#import datasets
 
-choicedat <- read.csv("~/Library/Mobile Documents/com~apple~CloudDocs/SFSU/Thesis/My Thesis/Git-Hub/NSF Pilot Project/thesis_pilot/Data/2023.10_Choice_EelgrassSegmentMass.csv")
+choicei <- read.csv("Data/2023.10_Feeding Assays_Choice_IDs.csv")
 
-choicedat2 <- read.csv("~/Library/Mobile Documents/com~apple~CloudDocs/SFSU/Thesis/My Thesis/Git-Hub/NSF Pilot Project/thesis_pilot/Data/pilot_assaydata.csv")
+choicedat <- read.csv("Data/2023.10_Choice_EelgrassSegmentMass.csv")
 
-choicedat2man <- read.csv("~/Library/Mobile Documents/com~apple~CloudDocs/SFSU/Thesis/My Thesis/Git-Hub/NSF Pilot Project/thesis_pilot/Data/2023.10_AV_Choice_AssaySegmentScanProcessing_manualpost.csv")
+choicedat2 <- read.csv("Data/pilot_assaydata.csv")
 
-avmassdat <- read.csv("~/Library/Mobile Documents/com~apple~CloudDocs/SFSU/Thesis/My Thesis/Git-Hub/NSF Pilot Project/thesis_pilot/Data/2023.10.27_AV_Choice_AVmasspercontainer.csv")
+choicedat2man <- read.csv("Data/2023.10_AV_Choice_AssaySegmentScanProcessing_manualpost.csv")
+
+avmassdat <- read.csv("Data/2023.10.27_AV_Choice_AVmasspercontainer.csv")
 
 #data preparation 
+
+#change names in dataset
 choiceid <- choicei %>% 
   pivot_longer(A:D,
                names_to = "treatment",
                values_to = "section_ID") %>% 
   relocate(c(treatment, section_ID), .after = AV_control)
 
-#av mass
+#mutate AV mass data to calculate actual AV mass by subtracting the boat mass 
 avmassdata <- avmassdat %>% 
   mutate(av_drymass_g = Boat_AV_dry_mass_g - Boat_mass_g) %>% 
   dplyr::select(-Boat_AV_dry_mass_g, -Boat_mass_g) %>% 
@@ -122,19 +123,18 @@ boxplota1 <- ggplot(data = choicedata[choicedata$AV_control == "AV",],
                               "reduced pH\nambient nut.", "reduced pH\nincreased nut.")) +
   labs(x = "Eelgrass treatment",
        y = expression(paste("Change in Segment Area ("*cm^2*")")),
-       title = "A. Valida Choice Bulk Area Loss by Treatments") +
+       title = "A. Valida Choice Assays: Eelgrass Bulk Area Loss by Treatments") +
   theme_bw(base_size = 14) +
   theme(axis.text = element_text(color = "black", size = 12))+
-   theme(plot.title = element_text(size = 16))
+   theme(plot.title = element_text(size = 13))
 boxplota1 
 ```
+__Figure 1__: This figure shows the bulk change in segment area (cm^2) of eelgrass segement area (x) by eelgrass nutrient treatment (y) and _A. valida_ treatment (legend). The box plot shows a slight preference of _A.valida_ to feed on eelgrass exposed to reduced pH and increased nutrients, when _A. valida_ has also been exposed to reduced pH. 
 
 # Statistical Analysis 
 
 ```{r 5}
 #bulk area loss analysis 
-
-hist((choicedata$area_change_adj[choicedata$AV_control == "AV"]))
 
 glmm2 <- lmer((area_change) ~ (pH_treat * nut_treat * tankpH_treat) + 
                 (1 | tank_ID:unit_ID) + (1 | plant_ID),
@@ -142,24 +142,9 @@ glmm2 <- lmer((area_change) ~ (pH_treat * nut_treat * tankpH_treat) +
 glmm2
 ```
 
-
 ```{r 6}
-#use the shapiro test
+#use the shapiro test to see normality of data 
 shapiro.test(resid(glmm2)) #ns = good
-```
-
-```{r 7}
-#plot the residuals
-hist(resid(glmm2))
-```
-
-```{r}
-plot(glmm2)
-```
-
-```{r 8}
-ggqqplot(resid(glmm2))
-
 ```
 
 ```{r 9}
@@ -176,8 +161,8 @@ anova(glmm2, type = 3, ddf = "Kenward-Roger")
 
 ## Results 
 
-A Generalized Linear Mixed Model was used to include both fixed and random effects in the experiment. A Shapiro-wilks normality test showed that the data was not normal (p-value= 1.086e-08.) The "Kenward Roger's F test" method was used to calculate the degrees of freedom in the statistical analysis. I performed an ANOVA test with Kenward Roger's method and there were no significant interactions between treatments. There was one interaction that was had a slightly significant effect on A.valida consumption and that was between eelgrass nutrient treatment (ambient or reduced) and A.valida pH treatment (ambient or reduced), p-value= 0.06. 
+A Generalized Linear Mixed Model was used to include both fixed and random effects in the experiment. A Shapiro-wilks normality test showed that the data was not normal (p-value= 1.086e-08.) The "Kenward Roger's F test" method was used to calculate the degrees of freedom in the statistical analysis. I performed an ANOVA test with Kenward Roger's method and there were no significant interactions between treatments. There was one interaction that was had a slightly significant effect on _A.valida_ consumption and that was between eelgrass nutrient treatment (ambient or reduced) and _A.valida_ pH treatment (ambient or reduced), p-value= 0.06. 
 
 ## Discussion
 
-
+This pilot experiment warrants future experimentation to determine _A.valida_ feeding preferences under future stressor conditions. The interaction between eelgrass nutrient treatment (ambient or reduced) and _A.valida_ pH treatment (ambient or reduced) was notable (p-value=0.06). We also saw a slightly elevated feeding preference when _A.valida_ was exposed to reduced pH conditions, and eelgrass was exposed to reduced pH and increased nutrients. Moving forward, I would like to examine this further in my own thesis experiment to offer more insight into these questions. I also would like to incorporate size class as a variable for _A.valida_ in my future study, as we saw only larger individuals consuming eelgrass tissue. This experiment will be pertinent to successful conservation and restoration of eelgrass meadows in San Francisco Bay.   
